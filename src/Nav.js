@@ -5,13 +5,16 @@ import "./Nav.css";
 function Nav() {
 
     const [show, handleShow] = useState(false);
+    
     const history = useNavigate();
     const transitionNavBar = () => {
         if (window.scrollY >100){
             handleShow(true);
+            
         }
         else{
             handleShow(false);
+            
         }
     }
 
@@ -28,6 +31,7 @@ function Nav() {
         onClick={() => history("/")}
         className="nav__logo"
         src="https://www.freepnglogos.com/uploads/red-netflix-logo-text-png-3.png" alt=""/>
+        <h3 className='project__creation'>Made by Riya Gupta</h3>
         <img 
         onClick={() => {
             history("/profile")
